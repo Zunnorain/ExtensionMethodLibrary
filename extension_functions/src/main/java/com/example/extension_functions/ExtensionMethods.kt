@@ -2,9 +2,10 @@ package com.example.extension_functions
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.NetworkInfo
 import android.os.Build
 import android.os.SystemClock
 import android.text.Editable
@@ -15,6 +16,7 @@ import android.util.Patterns
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
 
@@ -137,5 +139,14 @@ fun View.hide() {
 }
 fun View.invisible() {
     visibility = View.INVISIBLE
+}
+
+//Function To Convert View Type to a Bitmap
+fun viewToBitmap(binding: ConstraintLayout): Bitmap {
+    val view: ConstraintLayout = binding
+    val myBitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
+    val canvas = Canvas(myBitmap)
+    view.draw(canvas)
+    return myBitmap
 }
 

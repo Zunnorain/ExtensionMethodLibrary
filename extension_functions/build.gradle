@@ -49,7 +49,7 @@ afterEvaluate {
 
                 groupId = 'com.github.Zunnorain'
                 artifactId = 'zunnorain-extension-functions'
-                version = '1.0'
+                version = '2.0'
             }
         }
     }

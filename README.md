@@ -1,5 +1,5 @@
 # ExtensionMethodLibrary
-In order to you this library, add the following dependency in your Android build.gradle file.
+In order to use this library, add the following dependency in your Android build.gradle file.
 
 ```
 
